@@ -14,7 +14,7 @@ body {
 }
 
 .menu-icon {
-	background: url("images/menu-icon.png") no-repeat center;
+	background: url("../images/menu-icon.png") no-repeat center;
 	width: 42px;
 	height: 42px;
 }
