@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Drag-menu by mohlman3</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/mohlman3/drag-menu">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/mohlman3/drag-menu/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/mohlman3/drag-menu/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Drag-menu</h1>
+          <p>jQuery Plugin that provides &quot;native&quot; draggable menu functionality.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/mohlman3">mohlman3</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>drag-menu</h1>
+
+<p>drag-menu is a jQuery Plugin that provides "native" draggable menu 
+functionality.</p>
+
+<p>It is lightweight, extensible, and easy to use.  For mobile functionality the 
+"ui-touch-punch" library is included.  More information ui-touch-punch can be 
+found at: <a href="http://touchpunch.furf.com/">http://touchpunch.furf.com/</a>.</p>
+
+<p>Tested on iOS6 Safari and Mobile Chrome.  See a bug?  Send me an email at:
+<a href="mailto:drag-menu@ohlman.com">drag-menu@ohlman.com</a>, tweet <a href="https://twitter.com/matthewohlman">@matthewohlman</a>, or fork the source and submit a pull request.</p>
+
+<hr><h1>Example:</h1>
+
+<p>View a working example: <a href="http://www.ohlman.com/drag-menu/">http://www.ohlman.com/drag-menu/</a>
+<img src="http://www.ohlman.com/drag-menu/qrcode.13469501.png" alt="View on a Mobile Device"></p>
+
+<hr><h1>Dependencies:</h1>
+
+<ol>
+<li>jQuery</li>
+<li>jQuery UI</li>
+<li>ui-touch-punch jQuery plugin (<a href="http://touchpunch.furf.com">http://touchpunch.furf.com</a>) if you want to use
+it with touch events on a mobile device.</li>
+</ol><hr><h1>How to use it:</h1>
+
+<ol>
+<li>Include jQuery and jQuery UI.</li>
+<li>Include the "ui-touch-punch" library (included in this repository).</li>
+<li>Add a menu element to your page behind the main content.</li>
+<li>Add a handle that the user will drag to pull the menu out.</li>
+<li>
+<p>Initialize the plugin using the following call:</p>
+
+<pre><code>jQuery("#menu-id").dragMenu("#drag-handle-id", "#content-element-id");
+</code></pre>
+</li>
+</ol><hr><h1>Additional Options:</h1>
+
+<p>Additionally, you can pass in an object of options as the 3rd parameter to the dragMenu constructor.  The options are:</p>
+
+<h2>direction</h2>
+
+<p>The direction that the content will slide to reveal the menu.  Valid options are: left, right, up, down
+Default is: right</p>
+
+<h2>dragStart</h2>
+
+<p>A function that is called when dragging is starting.  The function will be passed the dragMenu instance, the jQuery UI drag event, and the jQuery UI object as parameters.</p>
+
+<h2>drag</h2>
+
+<p>A function that is called every time the element is dragged.  The function will be passed the dragMenu instance, the jQuery UI drag event, and the jQuery UI object as parameters.</p>
+
+<h2>dragStop</h2>
+
+<p>A function that is called when dragging is done.  The function will be passed the dragMenu instance, the jQuery UI drag event, and the jQuery UI object as parameters.</p>
+
+<h2>menuVisible</h2>
+
+<p>A function that is called when dragging is done and the menu is visible in any way. The function will be passed the dragMenu instance, the jQuery UI drag event, and the jQuery UI object as parameters.</p>
+
+<h2>menuHidden</h2>
+
+<p>A function that is called when dragging is done and the menu is completely hidden.  The function will be passed the dragMenu instance, the jQuery UI drag event, and the jQuery UI object as parameters.</p>
+
+<h2>closeAnimationDuration</h2>
+
+<p>The length of close animation in milliseconds.  The default value is 300.</p>
+
+<hr><h1>API Documentation:</h1>
+
+<h2>function dragMenu(handle, content, options)</h2>
+
+<p>The constructor.  Invoke this on the menu dom element.</p>
+
+<p>Parameters:</p>
+
+<p>handle: Either the jQuery selector for the handle that will be used to drag the menu out, or an actual dom or jQuery object that represents it.</p>
+
+<p>content: Either the jQuery selector for the content that will be dragged away to reveal the menu, or an actual dom or jQuery object that represents it.</p>
+
+<p>options: Additional options, see "Additional Options" section above.</p>
+
+<p>Example: </p>
+
+<pre><code>jQuery("#menu-id").dragMenu("#drag-handle-id", "#content-element-id");
+</code></pre>
+
+<h2>function openMenu()</h2>
+
+<p>Opens the menu.  Note: menuVisible will NOT fire when this method is invoked to open the menu.</p>
+
+<p>Example: </p>
+
+<pre><code>jQuery("#id").dragMenu("#handle", "#content").openMenu();
+</code></pre>
+
+<h2>function closeMenu()</h2>
+
+<p>Closes the menu.  Note: menuHidden will NOT fire when this method is
+invoked to close the menu.</p>
+
+<p>Example: </p>
+
+<pre><code>jQuery("#id").dragMenu("#handle", "#content").closeMenu();
+</code></pre>
+
+<hr><h1>License:</h1>
+
+<p>drag-menu is dual licensed under the MIT or GPL Version 2 licenses.</p>
+
+<p>If you use or distribute this library in additional plugins or software packages,
+please include attribution to the author (Matthew Ohlman) and github website
+(<a href="https://github.com/mohlman3/drag-menu">https://github.com/mohlman3/drag-menu</a>), and also include an attribution to the 
+ui-touch-punch plugin as required by its license.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
