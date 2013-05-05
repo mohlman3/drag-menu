@@ -78,25 +78,32 @@ dragMenu constructor.  The options are:
 API Documentation:
 ==================
 function dragMenu(handle, content, options):
+
 The constructor.  Invoke this on the menu dom element.
+
 Parameters:
-- handle:		Either the jQuery selector for the handle that will be 
+	handle:		Either the jQuery selector for the handle that will be 
 				used to drag the menu out, or an actual dom or jQuery  
 				object that represents it.
-- content:	Either the jQuery selector for the content that will
+	content:	Either the jQuery selector for the content that will
 				be dragged away to reveal the menu, or an actual dom
 				or jQuery object that represents it.
-- options:	Additional options, see "Additional Options" section
+	options:	Additional options, see "Additional Options" section
 				above.
+
 Example: 
+
 	jQuery("#menu-id").dragMenu("#drag-handle-id", "#content-element-id");
 	
 
 	
 function openMenu():
+
 Opens the menu.  Note: menuVisible will NOT fire when this method is 
 invoked to open the menu.
+
 Example: 
+
 	jQuery("#id").dragMenu("#handle", "#content").openMenu();
 	
 
@@ -104,9 +111,12 @@ Example:
 function closeMenu():
 Closes the menu.  Note: menuHidden will NOT fire when this method is
 invoked to close the menu.
+
 Example: 
+
 	jQuery("#id").dragMenu("#handle", "#content").closeMenu();
 		
+
 		
 License:
 ========
