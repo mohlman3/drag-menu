@@ -32,7 +32,7 @@ How to use it:
 1. Include jQuery and jQuery UI.
 2. Include the "ui-touch-punch" library (included in this repository).
 3. Add a menu element to your page behind the main content.
-4. Add a handle that the user will add to drag the menu out.
+4. Add a handle that the user will drag to pull the menu out.
 5. Initialize the plugin using the following call:
 		
 		jQuery("#menu-id").dragMenu("#drag-handle-id", "#content-element-id");
@@ -77,29 +77,35 @@ dragMenu constructor.  The options are:
 				
 API Documentation:
 ==================
-	function dragMenu(handle, content, options):
-		The constructor.  Invoke this on the menu dom element.
-		Parameters:
-			handle:		Either the jQuery selector for the handle that will be 
-						used to drag the menu out, or an actual dom or jQuery  
-						object that represents it.
-			content:	Either the jQuery selector for the content that will
-						be dragged away to reveal the menu, or an actual dom
-						or jQuery object that represents it.
-			options:	Additional options, see "Additional Options" section
-						above.
-						
-						
-	function openMenu():
-		Opens the menu.  Note: menuVisible will NOT fire when this method is 
-		invoked to open the menu.
-		Example: jQuery("#id").dragMenu("#handle", "#content").openMenu();
-		
-		
-	function closeMenu():
-		Closes the menu.  Note: menuHidden will NOT fire when this method is
-		invoked to open the menu.
-		Example: jQuery("#id").dragMenu("#handle", "#content").closeMenu();
+function dragMenu(handle, content, options):
+The constructor.  Invoke this on the menu dom element.
+Parameters:
+- handle:		Either the jQuery selector for the handle that will be 
+				used to drag the menu out, or an actual dom or jQuery  
+				object that represents it.
+- content:	Either the jQuery selector for the content that will
+				be dragged away to reveal the menu, or an actual dom
+				or jQuery object that represents it.
+- options:	Additional options, see "Additional Options" section
+				above.
+Example: 
+	jQuery("#menu-id").dragMenu("#drag-handle-id", "#content-element-id");
+	
+
+	
+function openMenu():
+Opens the menu.  Note: menuVisible will NOT fire when this method is 
+invoked to open the menu.
+Example: 
+	jQuery("#id").dragMenu("#handle", "#content").openMenu();
+	
+
+	
+function closeMenu():
+Closes the menu.  Note: menuHidden will NOT fire when this method is
+invoked to close the menu.
+Example: 
+	jQuery("#id").dragMenu("#handle", "#content").closeMenu();
 		
 		
 License:
