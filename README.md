@@ -94,11 +94,12 @@ Parameters:
 
 Example: 
 
-	jQuery("#menu-id").dragMenu("#drag-handle-id", "#content-element-id");
-	
+	jQuery("#menu-id").dragMenu("#drag-handle-id", "#content-element-id");    
 
-	
-	
+
+
+
+
 function openMenu():
 
 Opens the menu.  Note: menuVisible will NOT fire when this method is 
@@ -106,12 +107,14 @@ invoked to open the menu.
 
 Example: 
 
-	jQuery("#id").dragMenu("#handle", "#content").openMenu();
-	
-	
+	jQuery("#id").dragMenu("#handle", "#content").openMenu();    
 
-	
+
+
+
+
 function closeMenu():
+
 Closes the menu.  Note: menuHidden will NOT fire when this method is
 invoked to close the menu.
 
