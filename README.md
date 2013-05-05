@@ -7,8 +7,8 @@ It is lightweight, extensible, and easy to use.  For mobile functionality the
 "ui-touch-punch" library is included.  More information ui-touch-punch can be 
 found at: http://touchpunch.furf.com/.
 
-Tested on iOS6 Safari and Mobile Chrome.  See a bug?  Send me a message on GitHub
-or fork the source and submit a pull request.
+Tested on iOS6 Safari and Mobile Chrome.  See a bug?  Send me an email at:
+drag-menu@ohlman.com or fork the source and submit a pull request.
 
 
 Dependencies:
