@@ -131,6 +131,6 @@ License:
 drag-menu is dual licensed under the MIT or GPL Version 2 licenses.
 
 If you use or distribute this library in additional plugins or software packages,
-please include attribution to the author (Matthew Ohlman) and github website
-(https://github.com/mohlman3/drag-menu), and also include an attribution to the 
+please include attribution to the author (Matthew Ohlman) and website
+(http://www.ohlman.com/drag-menu), and also include an attribution to the 
 ui-touch-punch plugin as required by its license.
