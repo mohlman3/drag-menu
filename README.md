@@ -82,6 +82,7 @@ function dragMenu(handle, content, options):
 The constructor.  Invoke this on the menu dom element.
 
 Parameters:
+
 	handle:		Either the jQuery selector for the handle that will be 
 				used to drag the menu out, or an actual dom or jQuery  
 				object that represents it.
@@ -97,6 +98,7 @@ Example:
 	
 
 	
+	
 function openMenu():
 
 Opens the menu.  Note: menuVisible will NOT fire when this method is 
@@ -105,6 +107,7 @@ invoked to open the menu.
 Example: 
 
 	jQuery("#id").dragMenu("#handle", "#content").openMenu();
+	
 	
 
 	
