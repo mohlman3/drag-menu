@@ -8,7 +8,7 @@ It is lightweight, extensible, and easy to use.  For mobile functionality the
 found at: http://touchpunch.furf.com/.
 
 Tested on iOS6 Safari and Mobile Chrome.  See a bug?  Send me an email at:
-drag-menu@ohlman.com or fork the source and submit a pull request.
+drag-menu@ohlman.com, tweet [@matthewohlman](https://twitter.com/matthewohlman), or fork the source and submit a pull request.
 
 
 
@@ -105,8 +105,8 @@ API Documentation:
 License:
 ========
 drag-menu is dual licensed under the MIT or GPL Version 2 licenses.
+
 If you use or distribute this library in additional plugins or software packages,
-please include attribution to the author (Matthew Ohlman) and github website, and 
-also include an attribution to the ui-touch-punch plugin as required by its license.
-		
-		
+please include attribution to the author (Matthew Ohlman) and github website
+(https://github.com/mohlman3/drag-menu), and also include an attribution to the 
+ui-touch-punch plugin as required by its license.
