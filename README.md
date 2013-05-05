@@ -41,7 +41,7 @@ How to use it:
 	
 Additional Options:
 ===================
-Additionaly, you can pass in an object of options as the 3rd parameter to the 
+Additionally, you can pass in an object of options as the 3rd parameter to the 
 dragMenu constructor.  The options are:
 
 	direction: 	The direction that the content will slide to reveal the menu.  
