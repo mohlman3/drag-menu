@@ -3,6 +3,8 @@ drag-menu
 drag-menu is a jQuery Plugin that provides "native" draggable menu 
 functionality.
 
+View the website: http://www.ohlman.com/drag-menu/
+
 It is lightweight, extensible, and easy to use.  For mobile functionality the 
 "ui-touch-punch" library is included.  More information ui-touch-punch can be 
 found at: http://touchpunch.furf.com/.
