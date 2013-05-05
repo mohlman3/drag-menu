@@ -11,6 +11,13 @@ Tested on iOS6 Safari and Mobile Chrome.  See a bug?  Send me an email at:
 drag-menu@ohlman.com or fork the source and submit a pull request.
 
 
+
+Example:
+========
+View a working example: http://www.ohlman.com/drag-menu/
+
+
+
 Dependencies:
 =============
 1. jQuery
