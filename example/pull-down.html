@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div id="wrapper">
-		<div id="menu">
+		<div id="menu" class="horizontal">
 			<ul>
 				<li><a href="#">Menu Item 1</a></li>
 				<li><a href="#">Menu Item 2</a></li>
@@ -18,16 +18,16 @@
 				<li><a href="#">Menu Item 5</a></li>
 			</ul>
 		</div>
-		<div id="content" class="left-shadow">
+		<div id="content" class="top-shadow">
 			<div>
 				<span id="menu-drag-handle" class="menu-icon left">&nbsp;</span>
 				<h1>Drag Menu Example</h1>
-				<p>Drag the menu icon to the right to reveal the menu.</p>
-				<p>Additional Demos: Pull Right Demo | <a href="pull-left.html">Pull Left Demo</a> | <a href="pull-down.html">Pull Down Demo</a></p>
+				<p>Drag the menu icon down to reveal the menu.</p>
+				<p>Additional Demos: <a href="index.html">Pull Right Demo</a> | <a href="pull-left.html">Pull Left Demo</a> | Pull Down Demo</p>
 				<p>Code used to initialize this demo:</p>
 				<p><pre>
 jQuery("#menu").dragMenu("#menu-drag-handle", "#content", {
-	direction: "right"
+	direction: "down"
 });</pre></p>
 			</div>
 		</div>
@@ -39,7 +39,7 @@ jQuery("#menu").dragMenu("#menu-drag-handle", "#content", {
 	<script type="text/javascript" src="scripts/jquery.drag-menu.min.js"></script>
 	<script type="text/javascript">
 		jQuery("#menu").dragMenu("#menu-drag-handle", "#content", {
-			direction: "right"
+			direction: "down"
 		});
 	</script>
 </body>

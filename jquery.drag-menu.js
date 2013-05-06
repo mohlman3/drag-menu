@@ -53,7 +53,7 @@
 	onDragStop = function (event, ui) {
 		// if the dragable has been dragged, bind a click event so that
 		// tapping on the contentElm will snap it back to original position
-		if (contentElmLambdaPosition.left > 0 || contentElmLambdaPosition.top > 0) {
+		if (contentElmLambdaPosition.left != 0 || contentElmLambdaPosition.top != 0) {
 			// menu is showing in some way
 			contentElm.bind("click", jQuery.fn.dragMenu.closeMenu);
 			
@@ -131,8 +131,6 @@
 		direction = options.direction;
 		closeAnimationDuration = options.closeAnimationDuration;
 		
-		console.log(contentElmOriginalPosition.top);
-		
 		// set callbacks if set in options
 		if (options.dragStart && typeof(options.dragStart) == "function") {
 			dragStartCallback = options.dragStart;
@@ -157,6 +155,22 @@
 		// add the appropriate css animation styles to the document
 		addCssAnimationStyle();
 		
+		// absoluteley position the content element
+		contentElm.css("position", "absolute");
+		
+		var containment;
+		if (direction == "left" || direction == "up") {
+			containment = [	contentElmOriginalPosition.left - menuElmSize.width,
+							contentElmOriginalPosition.top - menuElmSize.height,
+							contentElmOriginalPosition.left,
+							contentElmOriginalPosition.top ]
+		} else {
+			containment = [ contentElmOriginalPosition.left, 
+							contentElmOriginalPosition.top, 
+							menuElmSize.width, 
+							menuElmSize.height ]
+		}
+		
 		// set draggable on the element
 		contentElm.draggable({
 			handle: handleElm,
@@ -164,7 +178,7 @@
 			drag: onDrag,
 			start: onDragStart,
 			stop: onDragStop,
-			containment: [contentElmOriginalPosition.left, contentElmOriginalPosition.top, menuElmSize.width, menuElmSize.height]
+			containment: containment
 		});
 		
 		return this;
