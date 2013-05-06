@@ -17,9 +17,12 @@
 				<p>Additional Demos: <a href="index.html">Pull Right Demo</a> | Pull Left Demo | <a href="pull-down.html">Pull Down Demo</a></p>
 				<p>Code used to initialize this demo:</p>
 				<p><pre>
-jQuery("#menu").dragMenu("#menu-drag-handle", "#content", {
-	direction: "left"
-});</pre></p>
+jQuery("#menu")
+  .dragMenu(
+	"#menu-drag-handle", 
+	"#content", 
+	{ direction: "left" }
+  );</pre></p>
 			</div>
 		</div>
 		<div id="menu" class="right">
