@@ -43,7 +43,7 @@
 	
 	onDragStart = function (event, ui) {
 		// do not allow click "snap back" while dragging
-		contentElm.unbind("click", jQuery.fn.dragMenu.closeMenu);
+		contentElm.unbind("click", onClick);
 		
 		if (dragStartCallback) {
 			dragStartCallback(this, event, ui);
@@ -55,14 +55,17 @@
 		// tapping on the contentElm will snap it back to original position
 		if (contentElmLambdaPosition.left != 0 || contentElmLambdaPosition.top != 0) {
 			// menu is showing in some way
-			contentElm.bind("click", jQuery.fn.dragMenu.closeMenu);
+			contentElm.bind("click", onClick);
 			
 			// fire the menu visible callback if set
 			if (menuVisibleCallback) {
 				menuVisibleCallback(this, event, ui);
 			}
 		} else if (contentElmLambdaPosition.left == 0 && contentElmLambdaPosition.top == 0) {
-			// menu is completely hidden
+		    // menu is completely hidden
+		    // unbind click event
+		    contentElm.unbind("click", onClick);
+
 			// fire the menu hidden callback if set
 			if (menuHiddenCallback) {
 				menuHiddenCallback(this, event, ui);
@@ -73,6 +76,21 @@
 			dragStopCallback(this, event, ui);
 		}
 	},
+
+    onClick = function (event) {
+        cancelEvent(event);
+        jQuery.fn.dragMenu.closeMenu();
+    },
+
+    cancelEvent = function(event) {
+        event.returnValue = false;
+        if (event.preventDefault) {
+            event.preventDefault();
+        }
+        if (event.stopPropagation) {
+            event.stopPropagation();
+        }
+    },
 	
 	getAxisFromDirection = function () {
 		switch (direction) {
@@ -210,6 +228,9 @@
 			   .css("left", contentElmOriginalPosition.left)
 			   .css("top", contentElmOriginalPosition.top);
 			   
+	    // unbind click event
+		contentElm.unbind("click", onClick);
+
 		// after animation is complete, remove the transition class
 		setTimeout(function () {
 			contentElm.removeClass("drag-menu-transition");
